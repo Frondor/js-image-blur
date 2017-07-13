@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ImageBlur demo by Frondor</title>
+	<style>
+		.container {
+			max-width: 600px;
+			margin: 0 auto;
+		}
+		#canvas {
+			display:block;
+			width: 100%;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img style="display:none" id="img" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAZABkAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCABeAH0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDz0LTwtOVKlWP2rQyH2kCTSBGzk9K1k01htAU8c5GKo25SEnLt/wAAUH+dSS3c0ox5hC+nSsJqUnobxlGK1LctvZwcysgbuoJyfwqq92i/LChwOm6oAlOCU1BLd3E6jewxnd+pwPQU3bU/l0ojq9CNSABh0J/Oggsecn61ZMVHlUrjsVvLrRhi+z6TLMeGnby1+g5NRLCWYADJPSr+sxiB4rJTkW0YVsf3jyazm7tRLirJswymTTGSrnl8dKjZK1TMyoUphSrZSmFKoRGq1KFp6pUipSuSMVKkCe1PVKkVKTY0RrH7VIIqnRPapyhZQSgA9QMZrNyNFEpCOniKra27MeBmnrD7VLkUolTysgce1KIavrASCMU9bbPap5yuUNGtFa88+QZjt1MrZ9un64rPud00zyvyzsWP1NdEsf2XQ5OPnupAv/AV5P64rGeLmohK8mypR0sZ5jqNo6vtFUTR1upGLRRaOmmOrhjqMx1VxWIlT2qVY6kEdSqmP4c1l7QfKRLHUix+1TKo/uD9alVV/uD8zUuoUokaRjjkVeRVKBcAhecEH+hqNVB6IB+dczrertLdyWkchWGE7SAfvHvmovc0SsdOYyT7dvSsnW9WbTnS2twpmYbmLDIUduPWovB11JLdz2pJeIR71BP3TnHFZ+uDzvEV5uIAjYKAe+ABipctbFqJ0nhu/k1ItDOo8xV3BlGAw6dK31sip6VheCoFbV7facrJmMjuMj/HFeo/2GCM45rklVd7G7jFbnB6/ew6bao0uSEXYiL1Y9TXKW/imCW58u6g8lWOFdWLY+oxWr8Qwyax9nwdkCBR9Tyf6flXGw2M73UTCMsN6k8cdRW1KStdkzhY7d4sdqhaKtma0Ksc4HNV3gUD1rRVEYuBktHUfl+1aLx+gqEx81aqGfIVlSss+JdOS8+z5cqDtMoA2g/4e9Sa7fG00mUo6B5P3a7Tzz1P5Zrh/apox51dlT912PUkjyOKmSL2qho2o276TZNPcwxySRhQrtgkjj+lbMctv3ni/OuOVWUXax0xpJkYjEcbSN0QFj+HNeWPI0sryE8uxY/ic16Z4j1G3tPD140cyGR4/LQA85bj+Wa8vDV04ZuSbZFRKLSO9+G9l50l7MewRP5n+lZ2qQH/AISO/wD3qri4fr9a3vhjdW1tpmoSXEqpiVSAe4C5riJr+S5upbhzlpnZz9Sc1kuaVWa7Gqsoo9K8IR2UdzHK80e9WBDKCK9eGCOOhr500DUTbSBj0z0r3GbWksfDVtfuQxkjTHuSM/yp4eXspT5vUMTHnUOXfY4zxRYQTX806kSs0hJOAcc1y95bjehYt8rDg/Wuh8VXFswjv7RwEkGSo7GuG1HWnYFQc1xQjOcro6JzVkek3NsN7cfX2qhLB14rytNQnguPtEE8sUoOd6OQa77w94rh1SyZL1Qt1D94rwJB/ex2PrW06VSmrrUwUoydi28GKhMXPSrMupWnYH9P8aqtqdsD90/mKlSn2G4RPJZJ5ZgBJIzAdATmmYopcV7Z5pL9plxEAxHk/cx2qcanejpcvVQClFJxXYpSfcmmvLm4G2aZ3HoTxUYpMU4UrJbDu3uTRXEsKsscrorfeCnGakiXP1quKmRiOKzkjSLL0MrRjg4Nao1u+lghgmupJIYBiNGbhR7VggnrT/O2jr2rCVNSN1UsbF5qsrReQWJjb5h7VjOxZjk0skpe2Q90JH4Hkf1qAPWlGmomdSdyQgYp1vcvaSebEcHBHPpUeSaa1dnKmrM57u9y22uXnqKiOtXRPVfyqlJ6UysXTinoiueXcjApcUCnAVZmJinAUAU4CkOwgFKBSgU4LSKQgqSMZYU0Cnxj5qllInlGAOKgapJCSevSmEVEUW2LGcqyeo/UVH0NPXhhSMME1a0ZD1QDNIx4pelMbJrbm0IsMPJpuKfijFZjP//Z" alt="Punta del Este">
+		<canvas id="canvas"></canvas>
+	</div>
+
+	<script src="http://cdn.rawgit.com/frondor/js-image-blur/master/lib/ImageBlur.min.js"></script>
+	<script>
+	(function () {
+		var img = document.getElementById('img'),
+			canvas = document.getElementById('canvas');
+
+		ImageBlur(img, canvas);
+	})();
+	</script>
+</body>
+</html>
