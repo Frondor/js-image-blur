@@ -47,7 +47,7 @@ img.src = '/image.jpg';
 ## ImageBlur(img, canvas, radio, alphaChannel);
 
 | Param | Description | Type | Default |
-|-------|-------------|---------|
+|-------|-------------|---------|---------|
 | img | Image element to apply the blur on or its id.| mixed `DOMelement`/`string ` | **required** |
 | canvas| Canvas element where the blurred image is drawn on, or its id.| mixed `DOMelement`/`string ` | **required** |
 | radius | Blur efect radius | `Number` | `(img.height/img.width)*10` |
