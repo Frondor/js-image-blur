@@ -1,0 +1,42 @@
+{
+  "name": "image-blur",
+  "version": "1.0.0",
+  "description": "Apply a blur effect to your images using HTML5 canvas",
+  "main": "lib/ImageBlur.js",
+  "scripts": {
+    "build": "node node_modules/webpack/bin/webpack.js --progress --hide-modules",
+    "dev": "node node_modules/webpack/bin/webpack.js --progress --colors --watch --env dev",
+    "test": "node node_modules/mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
+    "test:watch": "node node_modules/mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js"
+  },
+  "devDependencies": {
+    "babel-cli": "6.24.1",
+    "babel-core": "6.24.1",
+    "babel-eslint": "7.2.3",
+    "babel-loader": "7.0.0",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-preset-es2015": "6.24.1",
+    "chai": "3.5.0",
+    "eslint": "3.19.0",
+    "eslint-loader": "1.7.1",
+    "mocha": "3.3.0",
+    "webpack": "3.1.0",
+    "yargs": "7.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frondor/js-image-blur.git"
+  },
+  "keywords": [
+    "blur",
+    "html5",
+    "image",
+    "canvas"
+  ],
+  "author": "Federico Vázquez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krasimir/js-image-blur/issues"
+  },
+  "homepage": "https://github.com/Frondor/js-image-blur"
+}
