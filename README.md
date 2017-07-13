@@ -50,7 +50,7 @@ img.src = '/image.jpg';
 |-------|-------------|---------|---------|
 | img | Image element to apply the blur on or its id.| mixed `DOMelement`/`string ` | **required** |
 | canvas| Canvas element where the blurred image is drawn on, or its id.| mixed `DOMelement`/`string ` | **required** |
-| radius | Blur efect radius | `Number` | `(img.height/img.width)*10` |
+| radius | Blur effect radius | `Number` | `(img.height/img.width)*10` |
 | alphaChannel| Determine if the algorithm is working over alpha channel of the image as well. | `boolean` | `false` |
 
 
