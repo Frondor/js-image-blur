@@ -1,4 +1,4 @@
-var ImageBlur = function (img, canvas, radius, blurAlphaChannel) {
+export default function ImageBlur (img, canvas, radius, includeAlphaChannel) {
   const mulTable = [
       512, 512, 456, 512, 328, 456, 335, 512, 405, 328, 271, 456, 388, 335, 292, 512,
       454, 405, 364, 328, 298, 271, 496, 456, 420, 388, 360, 335, 312, 292, 273, 512,
@@ -325,7 +325,5 @@ var ImageBlur = function (img, canvas, radius, blurAlphaChannel) {
     context.putImageData(imageData, topX, topY);
   };
 
-  stackBlurCanvasRGB(context, 0, 0, w, h, radius, blurAlphaChannel);
+  stackBlurCanvasRGB(context, 0, 0, w, h, radius, includeAlphaChannel);
 };
-
-export default ImageBlur;
